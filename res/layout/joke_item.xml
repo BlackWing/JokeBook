@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99645C54"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnshoucang"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/love" />
+
+        <TextView
+            android:id="@+id/joke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="。各方面的风格非，开放公平而过；
+                                                 裂空棍vaegjmnij拉风贷款vgakpawk罗马纹路聘任高级哦感觉 
+                                                 克雷格老地方见过吗；的风格恐龙灭绝"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,ContentDescription,UselessParent" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff645C54"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivDel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/cart_ico_del" />
+
+        <TextView
+            android:id="@+id/joke"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:padding="5dp"
+            android:text="。各方面的风格非，开放公平而过；
+    裂空棍vaegjmnij拉风贷款vgakpawk罗马纹路聘任高级哦感觉
+    来到莫斯科赶快来；古灵精怪卡片公开；做了的购卡过啦；’噶恶口如果卡阿格拉，;ladkgok；给vakmgoekrmg
+    克雷格老地方见过吗；的风格恐龙灭绝"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+</RelativeLayout>

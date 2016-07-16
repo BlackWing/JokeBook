@@ -21,7 +21,7 @@
             android:src="@drawable/cart_ico_del" />
 
         <TextView
-            android:id="@+id/joke"
+            android:id="@+id/joke2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="10"

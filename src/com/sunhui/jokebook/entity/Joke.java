@@ -1,6 +1,12 @@
 package com.sunhui.jokebook.entity;
 
-public class Joke {
+import java.io.Serializable;
+
+import org.apache.http.entity.SerializableEntity;
+
+
+
+public class Joke implements Serializable {
 	private String content;
 	private String hashId;
 	private String unixtime;

@@ -1,11 +1,13 @@
 package com.sunhui.jokebook.activity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.sunhui.jokebook.R;
 import com.sunhui.jokebook.R.layout;
 import com.sunhui.jokebook.R.menu;
 import com.sunhui.jokebook.adapter.mineAdapter;
+import com.sunhui.jokebook.entity.Joke;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -23,6 +25,15 @@ public class FragnentActivity extends FragmentActivity {
 	private RadioButton rbMine;
 	private ArrayList<Fragment> fragments;
 	private mineAdapter pagerAdapter;
+	private List<Joke> shouCang;
+
+	public List<Joke> getShouCang() {
+		return shouCang;
+	}
+
+	public void setShouCang(List<Joke> shouCang) {
+		this.shouCang = shouCang;
+	}
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

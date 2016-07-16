@@ -9,16 +9,22 @@ import com.sunhui.jokebook.presenter.Ipresenter;
 import com.sunhui.jokebook.presenter.Presenter;
 import com.sunhui.jokebook.view.IView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class JokeFragment extends Fragment implements IView, OnRefreshListener {
 	private ListView lvJoke;
@@ -27,6 +33,8 @@ public class JokeFragment extends Fragment implements IView, OnRefreshListener {
 	private MyAdapter adapter;
 	private SwipeRefreshLayout swipeRefreshLayout;
 	private RecyclerView recyclerView;
+	private List<Joke> shouCang;
+	
 
 	public JokeFragment() {
 		super();
@@ -44,7 +52,7 @@ public class JokeFragment extends Fragment implements IView, OnRefreshListener {
 
 		}
 	};
-
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -57,8 +65,24 @@ public class JokeFragment extends Fragment implements IView, OnRefreshListener {
 				android.R.color.holo_red_dark, android.R.color.holo_green_dark,
 				android.R.color.holo_orange_dark);
 		ipresenter.loadData();
+		setListener();
 		return view;
 
+	}
+
+	private void setListener() {
+		lvJoke.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				Joke joke=result.get(position);
+				shouCang.add(joke);
+			((FragnentActivity)getActivity()).setShouCang(shouCang);
+			Toast.makeText(getActivity(), "收 藏 成 功 啦 ，小主！^_^", Toast.LENGTH_LONG).show();
+				return false;
+			}
+		});
 	}
 
 	@Override
@@ -79,4 +103,6 @@ public class JokeFragment extends Fragment implements IView, OnRefreshListener {
 		handler.sendEmptyMessageDelayed(5, 2000);
 
 	}
+	
+	
 }

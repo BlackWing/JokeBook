@@ -34,7 +34,7 @@
     </RelativeLayout>
 
     <ListView
-        android:id="@+id/lvJoke"
+        android:id="@+id/lvJoke2"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
     </ListView>
